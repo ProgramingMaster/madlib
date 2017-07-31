@@ -1,0 +1,14 @@
+{
+  "name"         : "madMadlibs",
+  "version"      : "0.0.0",
+  "description"  : "Simple madlib application.",
+  "main"         : "server.js",
+  "author"       : "ME!",
+  "dependencies" : {
+    "express": "~4.15.3",
+    "mongoose": "~4.11.4",
+    "morgan": "~1.8.2",
+    "body-parser": "~1.17.2",
+    "method-override": "~2.3.9"
+    }
+}
