@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 
 //config
-mongoose.connect('mongodb://localhost/madmadlibs')
+mongoose.connect( process.env.MONGODB_URI || 'mongodb://localhost/madmadlibs')
 app.use(express.static(__dirname + '/public'));
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({'extended':'true'}));
@@ -79,5 +79,5 @@ app.delete('/api/madlibs/:madlib_id', function(req, res) {
 });
 
 //listen
-app.listen(8080);
+app.listen(process.env.PORT || 8080);
 console.log("App listening on port 8080");
